@@ -598,7 +598,7 @@ button {
 .bottom-nav {
     position: fixed;
     left: 50%;
-    bottom: -30px;
+    bottom: -10px;
     transform: translateX(-50%);
     width: min(730px, calc(100% - 28px));
     height: 65px;

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#050608" />
+    <title>XAMPUS — Notice Center</title>
+    <link rel="stylesheet" href="notice.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo">X</div>
+          <div><b>XAMPUS</b><small>Campus Notice Center</small></div>
+        </div>
+        <div class="actions">
+          <button onclick="toast('Notifications opened')">♢</button
+          ><button onclick="toast('Profile opened')">◯</button>
+        </div>
+      </header>
+      <main>
+        <section class="hero">
+          <div>
+            <span>OFFICIAL CAMPUS UPDATES</span>
+            <h1>Notice Center</h1>
+            <p>
+              Academic, examination, administration, events, scholarship,
+              placement and campus updates in one place.
+            </p>
+          </div>
+          <div class="today">TODAY<strong id="date"></strong></div>
+        </section>
+        <div class="search">
+          <input
+            id="search"
+            placeholder="Search notice, exam, event, department..."
+          /><button id="unread">Unread Only</button>
+        </div>
+        <nav id="filters">
+          <button class="active" data-cat="all">All</button
+          ><button data-cat="academic">Academic</button
+          ><button data-cat="exam">Exam</button
+          ><button data-cat="admin">Administration</button
+          ><button data-cat="event">Events</button
+          ><button data-cat="urgent">Urgent</button
+          ><button data-cat="scholarship">Scholarship</button
+          ><button data-cat="placement">Placement</button
+          ><button data-cat="hostel">Hostel</button
+          ><button data-cat="library">Library</button>
+        </nav>
+        <div class="grid">
+          <section>
+            <div class="heading">
+              <h2>Latest Notices</h2>
+              <span id="count"></span>
+            </div>
+            <div id="list"></div>
+            <div id="empty">No notice found.</div>
+          </section>
+          <aside>
+            <div class="panel">
+              <h3>Priority Updates</h3>
+              <p>🔴 Urgent <b id="urgent">0</b></p>
+              <p>🟡 Exam <b id="exam">0</b></p>
+              <p>🔵 Academic <b id="academic">0</b></p>
+              <p>🟢 Events <b id="event">0</b></p>
+            </div>
+            <div class="panel">
+              <h3>Upcoming</h3>
+              <div class="upcoming">
+                <div><b>20 Aug</b><span>Internal Assessment</span></div>
+                <div><b>23 Aug</b><span>Campus Event</span></div>
+                <div><b>28 Aug</b><span>Placement Registration</span></div>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>Quick Access</h3>
+              <div class="quick">
+                <button onclick="choose('exam')">Exam Notices</button
+                ><button onclick="choose('placement')">Placements</button
+                ><button onclick="choose('scholarship')">Scholarships</button
+                ><button onclick="choose('hostel')">Hostel</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+    <div id="modal">
+      <div class="modal-box">
+        <button class="close" onclick="closeModal()">×</button
+        ><span id="mcat"></span>
+        <h2 id="mtitle"></h2>
+        <p id="mdesc"></p>
+        <small id="minfo"></small>
+        <div>
+          <button onclick="save()">☆ Save Notice</button
+          ><button onclick="share()">↗ Share</button
+          ><button onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="toast"></div>
+    <script src="notice.js"></script>
+        <nav class="bottom-nav">
+  <button class="nav-item" data-page="home", onclick="hom()">
+    <span class="nav-icon">⌂</span><span class="nav-label">Home</span>
+  </button>
+  <button class="nav-item" data-page="community" , onclick="com()">
+    <span class="nav-icon">♧</span><span class="nav-label">Community</span>
+  </button>
+  <button class="nav-item" data-page="ai" , onclick="AI()">
+    <span class="ai-orb"><span class="ai-ring"></span><span class="ai-core">X</span></span><span class="nav-label">AI
+      Agent</span>
+  </button>
+  <button class="nav-item active" data-page="notice" , onclick="not()">
+    <span class="nav-icon">▤</span><span class="nav-label">Notice</span>
+  </button>
+  <button class="nav-item" age="problem" , onclick="comp()">
+    <span class="nav-icon">◇</span><span class="nav-label">Your Problem</span>
+  </button>
+</nav>
+  </body>
+</html>

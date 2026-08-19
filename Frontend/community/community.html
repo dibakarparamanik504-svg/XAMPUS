@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <title>XAMPUS — Community</title>
+    <link rel="stylesheet" href="community.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-header">
+        <div>
+          <span class="eyebrow">XAMPUS COMMUNITY</span>
+          <h1 class="header-title">Community <span>Space</span></h1>
+          <p class="header-subtitle">
+            Learn, share and stay connected with your campus.
+          </p>
+        </div>
+        <div class="header-actions">
+          <button class="header-btn" id="searchBtn" aria-label="Search">
+            ⌕</button
+          ><button class="header-btn" id="filterBtn" aria-label="Filter">
+            ≡
+          </button>
+        </div>
+      </header>
+
+      <section class="community-intro">
+        <div class="community-label">
+          <span class="live-dot"></span>CAMPUS COMMUNITY
+        </div>
+        <h2>Your campus <span>has a voice.</span></h2>
+        <p>
+          Ask questions, share notes, join groups, discover events and connect
+          with students and teachers across the campus.
+        </p>
+      </section>
+
+      <div class="search-box">
+        <span class="search-icon">⌕</span
+        ><input
+          id="searchInput"
+          type="text"
+          placeholder="Search posts, notes, groups or questions..."
+        />
+      </div>
+
+      <div class="category-wrapper">
+        <div class="categories">
+          <button class="category active" data-filter="all">All</button
+          ><button class="category" data-filter="post">Posts</button
+          ><button class="category" data-filter="note">Notes</button
+          ><button class="category" data-filter="group">Groups</button
+          ><button class="category" data-filter="question">Questions</button
+          ><button class="category" data-filter="event">Events</button
+          ><button class="category" data-filter="resource">Resources</button>
+        </div>
+      </div>
+
+      <div class="create-post">
+        <div class="avatar">D</div>
+        <div class="create-input" id="openPost">
+          Share something with your campus...
+        </div>
+        <button class="post-button" id="postButton">Post</button>
+      </div>
+
+      <div class="section-header">
+        <h3>Community Feed</h3>
+        <span>Latest activity</span>
+      </div>
+
+      <article class="post pinned" data-type="post">
+        <div class="pinned-label">📌 PINNED BY FACULTY</div>
+        <div class="post-top">
+          <div class="author">
+            <div class="avatar">P</div>
+            <div class="author-info">
+              <strong
+                >Prof. S. Mukherjee
+                <span class="role teacher-role">TEACHER</span></strong
+              >
+              <p>Computer Science • 18 min ago</p>
+            </div>
+          </div>
+          <button class="more">⋯</button>
+        </div>
+        <h3 class="post-title">
+          Internal Hackathon: team registration closes this Friday.
+        </h3>
+        <p class="post-content">
+          Teams that have not completed their registration are requested to
+          submit the final member list before the deadline. Please check the
+          notice section for details.
+        </p>
+        <span class="post-tag">Official Update</span>
+        <div class="post-actions">
+          <button class="action">♡ <span>24</span></button
+          ><button class="action">◌ <span>8 comments</span></button
+          ><button class="action">↗ Share</button
+          ><button class="action save">♧ Save</button>
+        </div>
+      </article>
+
+      <article class="post" data-type="post">
+        <div class="post-top">
+          <div class="author">
+            <div class="avatar">A</div>
+            <div class="author-info">
+              <strong>Ananya Das <span class="role">STUDENT</span></strong>
+              <p>BCA • 2nd Year • 34 min ago</p>
+            </div>
+          </div>
+          <button class="more">⋯</button>
+        </div>
+        <h3 class="post-title">
+          Does anyone have the previous semester DBMS question papers?
+        </h3>
+        <p class="post-content">
+          Looking for the last two years' question papers. If anyone has them,
+          please share them here.
+        </p>
+        <span class="post-tag question">Question</span>
+        <div class="post-actions">
+          <button class="action">♡ <span>12</span></button
+          ><button class="action">◌ <span>6 comments</span></button
+          ><button class="action">↗ Share</button
+          ><button class="action save">♧ Save</button>
+        </div>
+      </article>
+
+      <article class="post" data-type="note">
+        <div class="post-top">
+          <div class="author">
+            <div class="avatar">R</div>
+            <div class="author-info">
+              <strong>Rahul Ghosh <span class="role">STUDENT</span></strong>
+              <p>BCA • 1st Year • 1 hr ago</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="post-title">Data Structures — Linked List short notes</h3>
+        <p class="post-content">
+          Made a simple revision sheet covering insertion, deletion, traversal
+          and common interview questions.
+        </p>
+        <span class="post-tag note">Study Notes</span>
+        <div class="post-actions">
+          <button class="action">♡ <span>31</span></button
+          ><button class="action">◌ <span>4 comments</span></button
+          ><button class="action">↓ Download</button
+          ><button class="action save">♧ Save</button>
+        </div>
+      </article>
+
+      <div class="section-header">
+        <h3>Groups you may like</h3>
+        <span>Explore all →</span>
+      </div>
+      <div class="group-grid" data-type="group">
+        <article class="group-card">
+          <div class="group-icon">C</div>
+          <strong>BCA 1st Year</strong>
+          <p>128 members • Study group</p>
+          <button class="join">Join Group</button>
+        </article>
+        <article class="group-card">
+          <div class="group-icon">&lt;/&gt;</div>
+          <strong>Coding Club</strong>
+          <p>86 members • Programming</p>
+          <button class="join">Join Group</button>
+        </article>
+      </div>
+
+      <div class="section-header">
+        <h3>Questions waiting for answers</h3>
+        <span>View all →</span>
+      </div>
+      <article class="question" data-type="question">
+        <div class="question-mark">?</div>
+        <div class="question-content">
+          <strong>How does recursion work in tree traversal?</strong
+          ><span>Asked by Arjun • 14 min ago</span>
+        </div>
+        <span class="answer-count">3 answers</span>
+      </article>
+
+      <div class="section-header">
+        <h3>Upcoming campus events</h3>
+        <span>View calendar →</span>
+      </div>
+      <article class="event-card" data-type="event">
+        <div class="event-date"><b>28</b><small>Aug</small></div>
+        <div class="event-info">
+          <strong>Campus Innovation Day</strong>
+          <p>Auditorium • 10:00 AM</p>
+        </div>
+        <button class="event-btn">Details</button>
+      </article>
+
+      <div class="section-header">
+        <h3>Useful resources</h3>
+        <span>Explore →</span>
+      </div>
+      <article class="post" data-type="resource">
+        <div class="post-top">
+          <div class="author">
+            <div class="avatar">X</div>
+            <div class="author-info">
+              <strong>XAMPUS Resources</strong>
+              <p>Official campus collection</p>
+            </div>
+          </div>
+        </div>
+        <h3 class="post-title">First Year Programming Resources</h3>
+        <p class="post-content">
+          C, C++, Python, SQL and basic web development learning materials
+          collected in one place.
+        </p>
+        <span class="post-tag">Resource</span>
+        <div class="post-actions">
+          <button class="action">Open →</button
+          ><button class="action save">♧ Save</button>
+        </div>
+      </article>
+    </div>
+    <div class="modal" id="postModal">
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3>Create a post</h3>
+          <button class="close" id="closeModal">×</button>
+        </div>
+        <div class="post-type">
+          <button class="type-btn active">Post</button
+          ><button class="type-btn">Question</button
+          ><button class="type-btn">Note</button
+          ><button class="type-btn">Event</button
+          ><button class="type-btn">Resource</button>
+        </div>
+        <textarea
+          class="post-input"
+          id="postInput"
+          placeholder="What would you like to share with your campus?"
+        ></textarea>
+        <div class="modal-footer">
+          <button class="cancel" id="cancelModal">Cancel</button
+          ><button class="publish" id="publishPost">Publish Post</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="community.js"></script>
+    <nav class="bottom-nav">
+  <button class="nav-item" data-page="home", onclick="hom()">
+    <span class="nav-icon">⌂</span><span class="nav-label">Home</span>
+  </button>
+  <button class="nav-item active" data-page="community" , onclick="com()">
+    <span class="nav-icon">♧</span><span class="nav-label">Community</span>
+  </button>
+  <button class="nav-item" data-page="ai" , onclick="AI()">
+    <span class="ai-orb"><span class="ai-ring"></span><span class="ai-core">X</span></span><span class="nav-label">AI
+      Agent</span>
+  </button>
+  <button class="nav-item" data-page="notice" , onclick="not()">
+    <span class="nav-icon">▤</span><span class="nav-label">Notice</span>
+  </button>
+  <button class="nav-item" age="problem" , onclick="comp()">
+    <span class="nav-icon">◇</span><span class="nav-label">Your Problem</span>
+  </button>
+</nav>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <title>XAMPUS — Smart Campus</title>
+    <link rel="stylesheet" href="AI_agent.css" />
+  </head>
+  <body>
+    <div id="splash" class="splash">
+      <div class="splash-grid"></div>
+      <div class="splash-orb"></div>
+      <div class="splash-logo"><div class="xmark">X</div></div>
+      <h1>XAMPUS</h1>
+      <p>One Campus. One Platform. Every Solution.</p>
+      <div class="splash-tags">
+        <span>Smart Campus</span><span>AI Powered</span><span>Connected</span>
+      </div>
+      <div class="load">
+        <div>
+          <span id="loadText">Initializing XAMPUS</span><b id="loadPct">0%</b>
+        </div>
+        <i><em id="loadBar"></em></i>
+      </div>
+    </div>
+    <div id="app" class="app hidden">
+      <header class="top">
+        <div>
+          <small>XAMPUS SMART CAMPUS</small>
+          <h1 id="pageTitle">Good morning, Dibakar</h1>
+          <p id="pageSub">Everything important on your campus, in one place.</p>
+        </div>
+        <div class="top-actions">
+          <button id="notifyBtn" class="icon-btn">
+            ♢<sup id="notifDot"></sup></button
+          ><button id="profileBtn" class="profile-mini">D</button>
+        </div>
+      </header>
+      <main id="content"></main>
+
+    </div>
+    <div id="modal" class="modal">
+      <div id="modalBox" class="modal-box"></div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="AI_agent.js"></script>
+        <nav class="bottom-nav">
+  <button class="nav-item" data-page="home", onclick="hom()">
+    <span class="nav-icon">⌂</span><span class="nav-label">Home</span>
+  </button>
+  <button class="nav-item" data-page="community" , onclick="com()">
+    <span class="nav-icon">♧</span><span class="nav-label">Community</span>
+  </button>
+  <button class="nav-item active" data-page="ai" , onclick="AI()">
+    <span class="ai-orb"><span class="ai-ring"></span><span class="ai-core">X</span></span><span class="nav-label">AI
+      Agent</span>
+  </button>
+  <button class="nav-item" data-page="notice" , onclick="not()">
+    <span class="nav-icon">▤</span><span class="nav-label">Notice</span>
+  </button>
+  <button class="nav-item" age="problem" , onclick="comp()">
+    <span class="nav-icon">◇</span><span class="nav-label">Your Problem</span>
+  </button>
+</nav>
+  </body>
+</html>

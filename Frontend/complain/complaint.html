@@ -1,0 +1,112 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>XAMPUS Complaint Center</title>
+<link rel="stylesheet" href="complaint.css" />
+<header><b>✦ XAMPUS</b><span>♢　DP</span></header>
+<main>
+  <section class="hero">
+    <div>
+      <small>YOUR PROBLEMS • TRACKED TO RESOLUTION</small>
+      <h1>Complaint Center</h1>
+      <p>
+        Report a campus problem, follow its progress and see the complete
+        resolution journey.
+      </p>
+    </div>
+    <button onclick="openNew">＋ Report a Problem</button>
+  </section>
+  <section class="stats">
+    <div>Total<strong id="total">0</strong></div>
+    <div>Pending<strong id="pending">0</strong></div>
+    <div>In Progress<strong id="progress">0</strong></div>
+    <div>Resolved<strong id="resolved">0</strong></div>
+  </section>
+  <label class="search">⌕ <input id="search" placeholder="Search complaint ID, title, category..." /></label>
+  <nav id="tabs">
+    <button data-s="all" class="active">All</button><button data-s="pending">Pending</button><button
+      data-s="progress">In Progress</button><button data-s="resolved">Resolved</button><button
+      data-s="rejected">Rejected</button>
+  </nav>
+  <div class="grid">
+    <section>
+      <div class="head">
+        <h2>My Complaints</h2>
+        <span id="count"></span>
+      </div>
+      <div id="list"></div>
+      <div id="empty">No complaints found.</div>
+    </section>
+    <aside>
+      <div class="panel">
+        <h3>Problem Categories</h3>
+        <button onclick="filterCat('infrastructure')">
+          🏢 Infrastructure <b id="ci">0</b></button><button onclick="filterCat('hostel')">
+          🛏 Hostel <b id="ch">0</b></button><button onclick="filterCat('academic')">
+          📚 Academic <b id="ca">0</b></button><button onclick="filterCat('cleanliness')">
+          ♻ Cleanliness <b id="cc">0</b></button><button onclick="filterCat('it')">
+          💻 IT / Network <b id="cit">0</b>
+        </button>
+      </div>
+      <div class="panel">
+        <h3>How It Works</h3>
+        <p>01 — Submit</p>
+        <p>02 — Verify & Assign</p>
+        <p>03 — Resolve</p>
+        <p>04 — Close</p>
+      </div>
+    </aside>
+  </div>
+</main>
+<div class="overlay" id="detail">
+  <div class="modal">
+    <button onclick="closeM('detail')">×</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+<div class="overlay" id="newp">
+  <div class="modal">
+    <button onclick="closeM('newp')">×</button>
+    <h2>Report a Campus Problem</h2>
+    <form id="form">
+      <input name="title" required placeholder="Problem title" /><select name="cat" required>
+        <option value="">Category</option>
+        <option value="infrastructure">Infrastructure</option>
+        <option value="hostel">Hostel</option>
+        <option value="academic">Academic</option>
+        <option value="cleanliness">Cleanliness</option>
+        <option value="it">IT / Network</option>
+      </select><input name="location" required placeholder="Location" /><select name="priority">
+        <option>Normal</option>
+        <option>High</option>
+        <option>Urgent</option>
+      </select><textarea name="desc" required placeholder="Describe the problem"></textarea><button>Submit
+        Complaint</button>
+    </form>
+  </div>
+</div>
+<div id="toast"></div>
+<script src="complaint.js"></script>
+</div>
+
+<nav class="bottom-nav">
+  <button class="nav-item" data-page="home", onclick="hom()">
+    <span class="nav-icon">⌂</span><span class="nav-label">Home</span>
+  </button>
+  <button class="nav-item" data-page="community" , onclick="com()">
+    <span class="nav-icon">♧</span><span class="nav-label">Community</span>
+  </button>
+  <button class="nav-item" data-page="ai" , onclick="AI()">
+    <span class="ai-orb"><span class="ai-ring"></span><span class="ai-core">X</span></span><span class="nav-label">AI
+      Agent</span>
+  </button>
+  <button class="nav-item" data-page="notice" , onclick="not()">
+    <span class="nav-icon">▤</span><span class="nav-label">Notice</span>
+  </button>
+  <button class="nav-item active "age="problem" ,>
+    <span class="nav-icon">◇</span><span class="nav-label">Your Problem</span>
+  </button>
+</nav>
+</body>
+
+</html>

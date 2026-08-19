@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <title>XAMPUS — Smart Campus</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-header">
+        <div class="student-area">
+          <div class="campus-status">
+            <span class="status-dot"></span>CAMPUS ONLINE
+          </div>
+          <h1>Good Evening, <span>Dibakar</span></h1>
+          <p>BCA • 1st Year <span class="separator">•</span> BUIE</p>
+        </div>
+        <div class="header-actions">
+          <button
+            class="icon-button"
+            id="notificationBtn"
+            aria-label="Notifications"
+          >
+            <span class="notification-dot"></span>🔔
+          </button>
+          <button class="profile-button" id="profileBtn">
+            <div class="avatar">D</div>
+            <div class="profile-text">
+              <strong>Dibakar</strong><span>Student</span>
+            </div>
+            <span class="chevron">›</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="campus-hero">
+          <div class="hero-background"></div>
+          <div class="hero-content">
+            <div class="hero-label">
+              <span class="pulse"></span>CAMPUS PULSE
+            </div>
+            <h2>Everything happening<br /><span>around your campus.</span></h2>
+            <p>
+              Your daily campus context — without searching through multiple
+              places.
+            </p>
+            <div class="hero-meta">
+              <div>◷ <span id="currentTime"></span></div>
+              <div>◉ Campus Active</div>
+            </div>
+          </div>
+          <div class="campus-orbit">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <div class="campus-core">
+              <span class="core-symbol">X</span><small>XAMPUS</small>
+            </div>
+            <div class="orbit-node node-1">C</div>
+            <div class="orbit-node node-2">A</div>
+            <div class="orbit-node node-3">N</div>
+          </div>
+        </section>
+
+        <section class="today-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">TODAY</span>
+              <h3>Your campus snapshot</h3>
+            </div>
+            <span class="date" id="todayDate"></span>
+          </div>
+          <div class="snapshot-grid">
+            <article class="snapshot-card">
+              <div class="card-top">
+                <span class="card-label">NEXT CLASS</span
+                ><span class="mini-icon blue">◷</span>
+              </div>
+              <h4>Data Structures</h4>
+              <p>11:30 AM <span>•</span> Room 204</p>
+              <div class="card-footer">
+                <span>In 42 min</span>
+                <div class="progress-mini"><span></span></div>
+              </div>
+            </article>
+            <article class="snapshot-card">
+              <div class="card-top">
+                <span class="card-label">ATTENDANCE</span
+                ><span class="mini-icon violet">%</span>
+              </div>
+              <div class="big-number">87<span>%</span></div>
+              <p>Current semester</p>
+              <div class="attendance-bar"><span></span></div>
+            </article>
+            <article class="snapshot-card">
+              <div class="card-top">
+                <span class="card-label">CAMPUS</span
+                ><span class="mini-icon green">●</span>
+              </div>
+              <h4>Active</h4>
+              <p>Campus services online</p>
+              <div class="live-indicator"><span></span>Live now</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="radar-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">CAMPUS RADAR</span>
+              <h3>What needs your attention?</h3>
+            </div>
+            <button class="text-button" id="radarDetails">
+              View details →
+            </button>
+          </div>
+          <div class="radar-grid">
+            <article class="radar-card">
+              <div class="radar-icon">✦</div>
+              <div class="radar-content">
+                <span class="radar-type">HAPPENING SOON</span>
+                <h4>Campus Innovation Day</h4>
+                <p>Auditorium <span>•</span> Tomorrow</p>
+              </div>
+              <span class="arrow">→</span>
+            </article>
+            <article class="radar-card">
+              <div class="radar-icon purple">◫</div>
+              <div class="radar-content">
+                <span class="radar-type">CAMPUS RESOURCE</span>
+                <h4>Library</h4>
+                <p>Open until 8:00 PM</p>
+              </div>
+              <span class="resource-status">OPEN</span>
+            </article>
+            <article class="radar-card">
+              <div class="radar-icon orange">◇</div>
+              <div class="radar-content">
+                <span class="radar-type">CAMPUS MOVEMENT</span>
+                <h4>College Bus</h4>
+                <p>Main Gate <span>•</span> 6:20 PM</p>
+              </div>
+              <span class="arrow">→</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="quick-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">QUICK CAMPUS</span>
+              <h3>Things you can do</h3>
+            </div>
+          </div>
+          <div class="quick-grid">
+            <button class="quick-card" data-action="scan">
+              <div class="quick-icon">▣</div>
+              <strong>Know your campus</strong><span>Attendance / Campus</span>
+            </button>
+            <button class="quick-card" data-action="schedule">
+              <div class="quick-icon purple-bg">◷</div>
+              <strong>My Schedule</strong><span>Today's classes</span>
+            </button>
+            <button class="quick-card" data-action="map">
+              <div class="quick-icon green-bg">⌖</div>
+              <strong>Campus Map</strong><span>Find places</span>
+            </button>
+            <button class="quick-card" data-action="emergency">
+              <div class="quick-icon red-bg">!</div>
+              <strong>Emergency</strong><span>Quick campus help</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="insight-section">
+          <div class="insight-card">
+            <div class="insight-left">
+              <span class="eyebrow">XAMPUS INSIGHT</span>
+              <h3>Your campus,<br />connected in one view.</h3>
+              <p>
+                XAMPUS brings your campus context together so you know what
+                matters before you need to search for it.
+              </p>
+            </div>
+            <div class="insight-visual">
+              <div class="signal signal-1"></div>
+              <div class="signal signal-2"></div>
+              <div class="signal signal-3"></div>
+              <div class="insight-core">X</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav">
+        <button class="nav-item active" data-page="home">
+          <span class="nav-icon">⌂</span><span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item" data-page="community" , onclick="com()">
+          <span class="nav-icon">♧</span
+          ><span class="nav-label">Community</span>
+        </button>
+        <button class="nav-item" data-page="ai" , onclick="AI()">
+          <span class="ai-orb"
+            ><span class="ai-ring"></span><span class="ai-core">X</span></span
+          ><span class="nav-label">AI Agent</span>
+        </button>
+        <button class="nav-item" data-page="notice" , onclick="not()">
+          <span class="nav-icon">▤</span><span class="nav-label">Notice</span>
+        </button>
+        <button class="nav-item" data-page="problem" , onclick="comp()">
+          <span class="nav-icon">◇</span
+          ><span class="nav-label">Your Problem</span>
+        </button>
+      </nav>
+    </div>
+
+    <aside class="notification-panel" id="notificationPanel">
+      <div class="panel-header">
+        <div>
+          <span class="eyebrow">XAMPUS</span>
+          <h3>Notifications</h3>
+        </div>
+        <button class="close-button" id="closeNotification">×</button>
+      </div>
+      <div class="notification-list">
+        <div class="notification-item unread">
+          <div class="notification-symbol blue-symbol">◷</div>
+          <div>
+            <strong>Next class reminder</strong>
+            <p>Data Structures starts at 11:30 AM.</p>
+            <small>8 min ago</small>
+          </div>
+        </div>
+        <div class="notification-item">
+          <div class="notification-symbol purple-symbol">✦</div>
+          <div>
+            <strong>Campus Innovation Day</strong>
+            <p>Event scheduled for tomorrow.</p>
+            <small>1 hour ago</small>
+          </div>
+        </div>
+        <div class="notification-item">
+          <div class="notification-symbol green-symbol">✓</div>
+          <div>
+            <strong>Campus service update</strong>
+            <p>Library is currently open.</p>
+            <small>2 hours ago</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="toast" id="toast"><span id="toastText"></span></div>
+    <script src="home.js"></script>
+  </body>
+</html>
